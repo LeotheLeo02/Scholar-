@@ -26,6 +26,8 @@
 		4323C9C828DD32E100FD2135 /* Scholar_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scholar_.xcdatamodel; sourceTree = "<group>"; };
 		4323C9CA28DD32E100FD2135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4323C9D028DD387300FD2135 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		4323C9D428DD444D00FD2135 /* Scholar+.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scholar+.entitlements"; sourceTree = "<group>"; };
+		4323C9D528DD449500FD2135 /* Scholar--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Scholar--Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 		4323C9BB28DD32E000FD2135 /* Scholar+ */ = {
 			isa = PBXGroup;
 			children = (
+				4323C9D528DD449500FD2135 /* Scholar--Info.plist */,
+				4323C9D428DD444D00FD2135 /* Scholar+.entitlements */,
 				4323C9BC28DD32E000FD2135 /* Scholar_App.swift */,
 				4323C9BE28DD32E000FD2135 /* ContentView.swift */,
 				4323C9D028DD387300FD2135 /* UserLocation.swift */,
@@ -278,12 +282,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Scholar+/Scholar+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scholar+/Preview Content\"";
 				DEVELOPMENT_TEAM = 8LGZB97F67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scholar--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -308,12 +314,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Scholar+/Scholar+.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scholar+/Preview Content\"";
 				DEVELOPMENT_TEAM = 8LGZB97F67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scholar--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
