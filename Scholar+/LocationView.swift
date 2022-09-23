@@ -22,7 +22,9 @@ struct LocationView: View{
     @FocusState var focus
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    @State private var view = false
     var body: some View{
+        NavigationStack{
         ZStack{
             Map(coordinateRegion: $viewmodel.region, showsUserLocation: true, annotationItems: annotations) { ann in
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: ann.latitude, longitude: ann.longitude)) {
@@ -32,43 +34,43 @@ struct LocationView: View{
                 viewmodel.CheckLocation()
             }
             VStack{
-            if add{
-                HStack{
-                    TextField("Name of Location", text: $name, axis: .vertical)
-                        .focused($focus)
-                    Button {
-                        let newannotation = Annotation(context: viewContext)
-                        newannotation.latitude = viewmodel.region.center.latitude
-                        newannotation.longitude = viewmodel.region.center.longitude
-                        newannotation.name = name
-                        newannotation.image = selectedImageData
-                        do {
-                            try viewContext.save()
-                        } catch {
-                            // Replace this implementation with code to handle the error appropriately.
-                            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                            let nsError = error as NSError
-                            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                if add{
+                    HStack{
+                        TextField("Name of Location", text: $name, axis: .vertical)
+                            .focused($focus)
+                        Button {
+                            let newannotation = Annotation(context: viewContext)
+                            newannotation.latitude = viewmodel.region.center.latitude
+                            newannotation.longitude = viewmodel.region.center.longitude
+                            newannotation.name = name
+                            newannotation.image = selectedImageData
+                            do {
+                                try viewContext.save()
+                            } catch {
+                                // Replace this implementation with code to handle the error appropriately.
+                                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                                let nsError = error as NSError
+                                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                            }
+                            name = ""
+                            add.toggle()
+                        } label: {
+                            Text("Add")
                         }
-                        name = ""
-                        add.toggle()
-                    } label: {
-                        Text("Add")
-                    }
-                }.padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(20)
-                    .padding()
-                PhotosPicker("Choose Image", selection: $selectedItem)
-                    .onChange(of: selectedItem) { newItem in
-                        Task {
-                            // Retrieve selected asset in the form of Data
-                            if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                                selectedImageData = data
+                    }.padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(20)
+                        .padding()
+                    PhotosPicker("Choose Image", selection: $selectedItem)
+                        .onChange(of: selectedItem) { newItem in
+                            Task {
+                                // Retrieve selected asset in the form of Data
+                                if let data = try? await newItem?.loadTransferable(type: Data.self) {
+                                    selectedImageData = data
+                                }
                             }
                         }
-                    }
-            }
+                }
                 if !add{
                     Circle()
                         .fill(.blue)
@@ -81,6 +83,22 @@ struct LocationView: View{
                             }
                         }
                 }
+            }
+        }.sheet(isPresented: $view, content: {
+            LocationListView()
+                .presentationDetents([.height(250), .large])
+                .presentationDragIndicator(.visible)
+        })
+        .navigationTitle("Scholar+")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    view.toggle()
+                } label: {
+                    Text("View All")
+                }
+
+            }
         }
     }
     }

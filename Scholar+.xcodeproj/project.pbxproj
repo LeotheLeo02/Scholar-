@@ -15,6 +15,7 @@
 		4323C9C928DD32E100FD2135 /* Scholar_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9C728DD32E100FD2135 /* Scholar_.xcdatamodeld */; };
 		4323C9D128DD387300FD2135 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9D028DD387300FD2135 /* UserLocation.swift */; };
 		4323C9D728DD4DFB00FD2135 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9D628DD4DFB00FD2135 /* LocationView.swift */; };
+		4323C9D928DD542B00FD2135 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9D828DD542B00FD2135 /* LocationListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4323C9D428DD444D00FD2135 /* Scholar+.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Scholar+.entitlements"; sourceTree = "<group>"; };
 		4323C9D528DD449500FD2135 /* Scholar--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Scholar--Info.plist"; sourceTree = SOURCE_ROOT; };
 		4323C9D628DD4DFB00FD2135 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		4323C9D828DD542B00FD2135 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				4323C9D428DD444D00FD2135 /* Scholar+.entitlements */,
 				4323C9BC28DD32E000FD2135 /* Scholar_App.swift */,
 				4323C9BE28DD32E000FD2135 /* ContentView.swift */,
+				4323C9D828DD542B00FD2135 /* LocationListView.swift */,
 				4323C9D628DD4DFB00FD2135 /* LocationView.swift */,
 				4323C9D028DD387300FD2135 /* UserLocation.swift */,
 				4323C9C028DD32E100FD2135 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				4323C9D728DD4DFB00FD2135 /* LocationView.swift in Sources */,
 				4323C9C628DD32E100FD2135 /* Persistence.swift in Sources */,
 				4323C9BF28DD32E000FD2135 /* ContentView.swift in Sources */,
+				4323C9D928DD542B00FD2135 /* LocationListView.swift in Sources */,
 				4323C9BD28DD32E000FD2135 /* Scholar_App.swift in Sources */,
 				4323C9D128DD387300FD2135 /* UserLocation.swift in Sources */,
 			);
