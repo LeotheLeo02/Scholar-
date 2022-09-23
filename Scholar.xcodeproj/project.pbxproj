@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4323C9B928DD32E000FD2135 /* Scholar+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scholar+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4323C9B928DD32E000FD2135 /* Scholar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scholar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4323C9BC28DD32E000FD2135 /* Scholar_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scholar_App.swift; sourceTree = "<group>"; };
 		4323C9BE28DD32E000FD2135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4323C9C028DD32E100FD2135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		4323C9D528DD449500FD2135 /* Scholar--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Scholar--Info.plist"; sourceTree = SOURCE_ROOT; };
 		4323C9D628DD4DFB00FD2135 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		4323C9D828DD542B00FD2135 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
-		4323C9E228DD684B00FD2135 /* Scholar+Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scholar+Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4323C9E228DD684B00FD2135 /* ScholarWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScholarWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4323C9E428DD684B00FD2135 /* Scholar_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scholar_WatchApp.swift; sourceTree = "<group>"; };
 		4323C9E628DD684B00FD2135 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4323C9E828DD684B00FD2135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		4323C9BA28DD32E000FD2135 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4323C9B928DD32E000FD2135 /* Scholar+.app */,
-				4323C9E228DD684B00FD2135 /* Scholar+Watch Watch App.app */,
+				4323C9B928DD32E000FD2135 /* Scholar.app */,
+				4323C9E228DD684B00FD2135 /* ScholarWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4323C9B828DD32E000FD2135 /* Scholar+ */ = {
+		4323C9B828DD32E000FD2135 /* Scholar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4323C9CD28DD32E100FD2135 /* Build configuration list for PBXNativeTarget "Scholar+" */;
+			buildConfigurationList = 4323C9CD28DD32E100FD2135 /* Build configuration list for PBXNativeTarget "Scholar" */;
 			buildPhases = (
 				4323C9B528DD32E000FD2135 /* Sources */,
 				4323C9B628DD32E000FD2135 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = "Scholar+";
+			name = Scholar;
 			productName = "Scholar+";
-			productReference = 4323C9B928DD32E000FD2135 /* Scholar+.app */;
+			productReference = 4323C9B928DD32E000FD2135 /* Scholar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4323C9E128DD684B00FD2135 /* Scholar+Watch Watch App */ = {
+		4323C9E128DD684B00FD2135 /* ScholarWatch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4323C9ED28DD684B00FD2135 /* Build configuration list for PBXNativeTarget "Scholar+Watch Watch App" */;
+			buildConfigurationList = 4323C9ED28DD684B00FD2135 /* Build configuration list for PBXNativeTarget "ScholarWatch Watch App" */;
 			buildPhases = (
 				4323C9DE28DD684B00FD2135 /* Sources */,
 				4323C9DF28DD684B00FD2135 /* Frameworks */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = "Scholar+Watch Watch App";
+			name = "ScholarWatch Watch App";
 			productName = "Scholar+Watch Watch App";
-			productReference = 4323C9E228DD684B00FD2135 /* Scholar+Watch Watch App.app */;
+			productReference = 4323C9E228DD684B00FD2135 /* ScholarWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4323C9B428DD32E000FD2135 /* Build configuration list for PBXProject "Scholar+" */;
+			buildConfigurationList = 4323C9B428DD32E000FD2135 /* Build configuration list for PBXProject "Scholar" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -208,8 +208,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4323C9B828DD32E000FD2135 /* Scholar+ */,
-				4323C9E128DD684B00FD2135 /* Scholar+Watch Watch App */,
+				4323C9B828DD32E000FD2135 /* Scholar */,
+				4323C9E128DD684B00FD2135 /* ScholarWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -514,7 +514,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4323C9B428DD32E000FD2135 /* Build configuration list for PBXProject "Scholar+" */ = {
+		4323C9B428DD32E000FD2135 /* Build configuration list for PBXProject "Scholar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4323C9CB28DD32E100FD2135 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4323C9CD28DD32E100FD2135 /* Build configuration list for PBXNativeTarget "Scholar+" */ = {
+		4323C9CD28DD32E100FD2135 /* Build configuration list for PBXNativeTarget "Scholar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4323C9CE28DD32E100FD2135 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4323C9ED28DD684B00FD2135 /* Build configuration list for PBXNativeTarget "Scholar+Watch Watch App" */ = {
+		4323C9ED28DD684B00FD2135 /* Build configuration list for PBXNativeTarget "ScholarWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4323C9EE28DD684B00FD2135 /* Debug */,
