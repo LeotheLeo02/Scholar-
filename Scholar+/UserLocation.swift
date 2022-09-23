@@ -10,6 +10,8 @@ import MapKit
 
 final class LocationViewModel: NSObject, CLLocationManagerDelegate, ObservableObject{
     
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 60), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    
     var locationManager: CLLocationManager?
     
     func CheckLocation(){
@@ -32,7 +34,7 @@ final class LocationViewModel: NSObject, CLLocationManagerDelegate, ObservableOb
         case .denied:
             print("Go to settings to fix")
         case .authorizedAlways, .authorizedWhenInUse:
-            break
+            region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
         @unknown default:
             break
         }

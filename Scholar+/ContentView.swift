@@ -17,33 +17,41 @@ struct ContentView: View {
         animation: .default)
     private var annotations: FetchedResults<Annotation>
     @StateObject private var viewmodel = LocationViewModel()
-    @State private var center = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 60), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var add = false
+    @State private var name = ""
     var body: some View {
         ZStack{
-            Map(coordinateRegion: $center, showsUserLocation: true, annotationItems: annotations) { ann in
+            Map(coordinateRegion: $viewmodel.region, showsUserLocation: true, annotationItems: annotations) { ann in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: ann.latitude, longitude: ann.longitude)) {
                 Text(ann.name!)
             }
             }.onAppear(){
                 viewmodel.CheckLocation()
             }
+            if add{
+                TextField("Name of Location", text: $name, axis: .vertical)
+                    .onSubmit {
+                        let newannotation = Annotation(context: viewContext)
+                        newannotation.latitude = viewmodel.region.center.latitude
+                        newannotation.longitude = viewmodel.region.center.longitude
+                        newannotation.name = name
+                        do {
+                            try viewContext.save()
+                        } catch {
+                            // Replace this implementation with code to handle the error appropriately.
+                            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                            let nsError = error as NSError
+                            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                        }
+                        name = ""
+                    }
+            }
             Circle()
                 .fill(.blue)
                 .opacity(0.3)
                 .frame(width: 32,height: 32)
                 .onTapGesture {
-                    let newannotation = Annotation(context: viewContext)
-                    newannotation.latitude = center.center.latitude
-                    newannotation.longitude = center.center.longitude
-                    newannotation.name = "Trial"
-                                do {
-                                    try viewContext.save()
-                                } catch {
-                                    // Replace this implementation with code to handle the error appropriately.
-                                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                                    let nsError = error as NSError
-                                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-                                }
+                    add.toggle()
                 }
     }
     }
