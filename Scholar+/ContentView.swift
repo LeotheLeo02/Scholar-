@@ -16,15 +16,17 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Annotation.name, ascending: true)],
         animation: .default)
     private var annotations: FetchedResults<Annotation>
-
+    @StateObject private var viewmodel = LocationViewModel()
     @State private var center = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 60), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     var body: some View {
         ZStack{
-        Map(coordinateRegion: $center, annotationItems: annotations) { ann in
+            Map(coordinateRegion: $center, showsUserLocation: true, annotationItems: annotations) { ann in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: ann.latitude, longitude: ann.longitude)) {
                 Text(ann.name!)
             }
-        }
+            }.onAppear(){
+                viewmodel.CheckLocation()
+            }
             Circle()
                 .fill(.blue)
                 .opacity(0.3)

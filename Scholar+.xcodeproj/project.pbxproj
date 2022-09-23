@@ -13,6 +13,7 @@
 		4323C9C428DD32E100FD2135 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4323C9C328DD32E100FD2135 /* Preview Assets.xcassets */; };
 		4323C9C628DD32E100FD2135 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9C528DD32E100FD2135 /* Persistence.swift */; };
 		4323C9C928DD32E100FD2135 /* Scholar_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9C728DD32E100FD2135 /* Scholar_.xcdatamodeld */; };
+		4323C9D128DD387300FD2135 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323C9D028DD387300FD2135 /* UserLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4323C9C528DD32E100FD2135 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4323C9C828DD32E100FD2135 /* Scholar_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scholar_.xcdatamodel; sourceTree = "<group>"; };
 		4323C9CA28DD32E100FD2135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4323C9D028DD387300FD2135 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				4323C9BC28DD32E000FD2135 /* Scholar_App.swift */,
 				4323C9BE28DD32E000FD2135 /* ContentView.swift */,
+				4323C9D028DD387300FD2135 /* UserLocation.swift */,
 				4323C9C028DD32E100FD2135 /* Assets.xcassets */,
 				4323C9C528DD32E100FD2135 /* Persistence.swift */,
 				4323C9CA28DD32E100FD2135 /* Info.plist */,
@@ -149,6 +152,7 @@
 				4323C9C628DD32E100FD2135 /* Persistence.swift in Sources */,
 				4323C9BF28DD32E000FD2135 /* ContentView.swift in Sources */,
 				4323C9BD28DD32E000FD2135 /* Scholar_App.swift in Sources */,
+				4323C9D128DD387300FD2135 /* UserLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +284,7 @@
 				DEVELOPMENT_TEAM = 8LGZB97F67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +314,7 @@
 				DEVELOPMENT_TEAM = 8LGZB97F67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
